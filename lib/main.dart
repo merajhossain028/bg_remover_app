@@ -28,11 +28,10 @@ class RemoveBackground extends StatefulWidget {
   const RemoveBackground({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _RemoveBackgroundState createState() => _RemoveBackgroundState();
+  RemoveBackgroundState createState() => RemoveBackgroundState();
 }
 
-class _RemoveBackgroundState extends State<RemoveBackground> {
+class RemoveBackgroundState extends State<RemoveBackground> {
   Uint8List? imageFile;
 
   String? imagePath;
