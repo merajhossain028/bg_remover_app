@@ -42,7 +42,7 @@ class RemoveBackgroundState extends State<RemoveBackground> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Remove Bg'),
+          title: const Text('BG Remover'),
           actions: [
             IconButton(
                 onPressed: () {
@@ -114,8 +114,7 @@ class RemoveBackgroundState extends State<RemoveBackground> {
 
     if (isGranted) {
       String directory = (await getExternalStorageDirectory())!.path;
-      String fileName =
-          "${DateTime.now().microsecondsSinceEpoch}.png";
+      String fileName = "${DateTime.now().microsecondsSinceEpoch}.png";
       controller.captureAndSave(directory, fileName: fileName);
     }
   }
