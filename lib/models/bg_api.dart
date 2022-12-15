@@ -7,7 +7,7 @@ class ApiClient {
         "POST", Uri.parse("https://api.remove.bg/v1.0/removebg"));
     request.files
         .add(await http.MultipartFile.fromPath("image_file", imagePath));
-    request.headers.addAll({"X-API-Key": "dpFmZVnadNPfG8FPeELrSuwP"}); //Put Your API key HERE
+    request.headers.addAll({"X-API-Key": "HE4xPRrgYeRyR8SygHxtExJb"}); //Put Your API key HERE
     final response = await request.send();
     if (response.statusCode == 200) {
       http.Response imgRes = await http.Response.fromStream(response);

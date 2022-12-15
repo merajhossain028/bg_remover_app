@@ -7,6 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'models/bg_api.dart';
+import 'view/added_new_bg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -87,6 +88,25 @@ class RemoveBackgroundState extends State<RemoveBackground> {
                         size: 100,
                       ),
                     ),
+              ElevatedButton(
+                onPressed: () {
+                  if (imageFile != null) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>  AddNewBg(imageFile:imageFile),
+                      ),
+                    );
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Please Select Image First'),
+                      ),
+                    );
+                  }
+                },
+                child: const Text('Add New Background'),
+              ),
             ],
           ),
         ));
