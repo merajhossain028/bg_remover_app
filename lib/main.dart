@@ -39,6 +39,8 @@ class RemoveBackgroundState extends State<RemoveBackground> {
 
   ScreenshotController controller = ScreenshotController();
 
+  bool isLoading = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,7 +96,7 @@ class RemoveBackgroundState extends State<RemoveBackground> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>  AddNewBg(imageFile:imageFile),
+                        builder: (context) => AddNewBg(imageFile: imageFile),
                       ),
                     );
                   } else {
